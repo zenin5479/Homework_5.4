@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 // Обработка массивов подпрограммами
 // Даны одномерный массив P из n элементов и двумерный массив A: n строк и n столбцов
@@ -14,7 +15,29 @@ namespace Homework_5._4
    {
       static void Main(string[] args)
       {
-         Console.WriteLine("Hello World");
+         string nameFileEnter = "a.txt";
+         string nameFileInput = "finish.txt";
+         int row = VariousMethods.SizeRow();
+         int column = VariousMethods.SizeColumn();
+         string pathFileEnter = Path.GetFullPath(nameFileEnter);
+         double[,] source = VariousMethods.EnterArrayDouble(row, column, pathFileEnter);
+         if (source.GetLength(0) == 0)
+         {
+            Console.WriteLine("Файл {0} пуст", nameFileEnter);
+         }
+         else
+         {
+            double[,] inputArray = VariousMethods.InputArrayDouble(source, row, column);
+            double[] sumRow = VariousMethods.SumRowElements(inputArray);
+            double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
+            string pathFileInput = Path.GetFullPath(nameFileInput);
+            File.Create(pathFileInput).Close();
+            string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
+            VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
+         }
+
+         Console.ReadKey();
+
       }
    }
 }

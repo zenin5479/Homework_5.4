@@ -37,7 +37,6 @@ namespace Homework_5._4
          }
 
          Console.ReadKey();
-
       }
    }
 }

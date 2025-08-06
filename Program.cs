@@ -41,11 +41,6 @@ namespace Homework_5._4
 
       public static int SearchingNegativeDouble(double[] inputArray)
       {
-
-        
-
-
-
          int count = 0;
          int i = 0;
          while (i < inputArray.GetLength(0))
@@ -59,13 +54,9 @@ namespace Homework_5._4
                   count++;
                }
 
-               outputArray[i, j] = inputArray[i, j];
-               Console.Write("{0} ", outputArray[i, j]);
                j++;
             }
 
-
-            Console.WriteLine();
 
 
 

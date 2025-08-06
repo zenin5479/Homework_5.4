@@ -165,7 +165,6 @@ namespace Homework_5._4
             int j = 0;
             while (j < inputArray.GetLength(1))
             {
-
                if (inputArray[i, j] < 0)
                {
                   count++;

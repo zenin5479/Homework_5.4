@@ -59,7 +59,7 @@ namespace Homework_5._4
 
                j++;
             }
-            
+
             i++;
          }
 

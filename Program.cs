@@ -22,7 +22,7 @@ namespace Homework_5._4
          string nameFileInput = "finish.txt";
          int row = VariousMethods.SizeRow();
          string pathFileEnter = Path.GetFullPath(nameFileEnter2Array);
-         // Написать метод ввода 1Array
+         // Написать метод ввода для 1Array
          double[,] source = VariousMethods.EnterArrayDouble(row, row, pathFileEnter);
          if (source.GetLength(0) == 0)
          {

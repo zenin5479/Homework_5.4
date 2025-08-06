@@ -20,7 +20,7 @@ namespace Homework_5._4
          string nameFileInput = "finish.txt";
          int row = VariousMethods.SizeRow();
          string pathFileEnter = Path.GetFullPath(nameFileEnter2Array);
-         double[,] source = VariousMethods.EnterArrayDouble(row, column, pathFileEnter);
+         double[,] source = VariousMethods.EnterArrayDouble(row, row, pathFileEnter);
          if (source.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileEnter2Array);

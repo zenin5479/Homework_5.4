@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 // Обработка массивов подпрограммами
 // Даны одномерный массив P из n элементов и двумерный массив A: n строк и n столбцов
@@ -24,7 +25,7 @@ namespace Homework_5._4
          string pathFile1Array = Path.GetFullPath(nameFile1Array);
          string pathFile2Array = Path.GetFullPath(nameFile2Array);
 
-         double[] source1Array = VariousMethods.Enter1DArrayDouble(nameFile1Array, name1Array);
+         double[] source1Array = Enter1DArrayDouble(nameFile1Array, name1Array);
          double[,] source2Array = VariousMethods.EnterArrayDouble(row, row, pathFile2Array);
 
          if (source2Array.GetLength(0) == 0)
@@ -43,6 +44,97 @@ namespace Homework_5._4
          }
 
          Console.ReadKey();
+      }
+      
+      public static double[] Enter1DArrayDouble(string path, string nameArray)
+      {
+         string stroka = null;
+         double[] arrayDouble = { };
+         FileStream filestream = File.Open(path, FileMode.Open, FileAccess.Read);
+         if (filestream == null || filestream.Length == 0)
+         {
+            Console.WriteLine("Ошибка при открытии файла для чтения");
+         }
+         else
+         {
+            StreamReader streamReader = new StreamReader(filestream);
+            while (streamReader.Peek() >= 0)
+            {
+               stroka = streamReader.ReadLine();
+               //Console.WriteLine(stroka);
+            }
+
+            // Определение количества столбцов в строке разделением строки на подстроки по пробелу
+            // Символ пробела
+            char symbolSpace = ' ';
+            // Счетчик символов
+            int symbolСount = 0;
+            // Количество столбцов в строке
+            int сolumn = 0;
+            if (stroka != null)
+            {
+               Console.WriteLine("Исходный строковый массив {0}:", nameArray);
+               Console.WriteLine(stroka);
+               while (symbolСount < stroka.Length)
+               {
+                  if (symbolSpace == stroka[symbolСount])
+                  {
+                     сolumn++;
+                  }
+
+                  if (symbolСount == stroka.Length - 1)
+                  {
+                     сolumn++;
+                  }
+
+                  symbolСount++;
+               }
+
+               //Console.WriteLine("Количество столбцов {0}:", сolumn);
+
+               // Разделение строки на подстроки по пробелу и конвертация подстрок в double
+               Console.WriteLine("Массив вещественных чисел {0}:", nameArray);
+               // Одномерный массив вещественных чисел
+               arrayDouble = new double[сolumn];
+               // Построитель строк
+               StringBuilder stringModified = new StringBuilder();
+               // Счетчик символов обнуляем
+               symbolСount = 0;
+               // Количество столбцов в строке обнуляем
+               сolumn = 0;
+               while (symbolСount < stroka.Length)
+               {
+                  if (symbolSpace != stroka[symbolСount])
+                  {
+                     stringModified.Append(stroka[symbolСount]);
+                  }
+                  else
+                  {
+                     string subLine = stringModified.ToString();
+                     arrayDouble[сolumn] = Convert.ToDouble(subLine);
+                     Console.Write(arrayDouble[сolumn] + " ");
+                     stringModified.Clear();
+                     сolumn++;
+                  }
+
+                  if (symbolСount == stroka.Length - 1)
+                  {
+                     string subLine = stringModified.ToString();
+                     arrayDouble[сolumn] = Convert.ToDouble(subLine);
+                     Console.Write(arrayDouble[сolumn]);
+                     stringModified.Clear();
+                     сolumn++;
+                  }
+
+                  symbolСount++;
+               }
+            }
+
+            streamReader.Close();
+            Console.WriteLine();
+         }
+
+         return arrayDouble;
       }
 
       public static int SearchingNegativeDouble(double[,] inputArray)

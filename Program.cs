@@ -21,12 +21,13 @@ namespace Homework_5._4
          string nameFile1DArray = "p.txt";
          string nameFile2DArray = "a.txt";
          string nameFileInput = "finish.txt";
+         // Написать метод для матрицы n x n
          int row = MethodsFor2DArray.SizeRow();
-         string pathFile1Array = Path.GetFullPath(nameFile1DArray);
-         string pathFile2Array = Path.GetFullPath(nameFile2DArray);
+         string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
+         string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
 
          double[] source1Array = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
-         double[,] source2Array = MethodsFor2DArray.EnterArrayDouble(row, row, pathFile2Array);
+         double[,] source2Array = MethodsFor2DArray.EnterArrayDouble(row, row, pathFile2DArray);
 
          if (source2Array.GetLength(0) == 0)
          {

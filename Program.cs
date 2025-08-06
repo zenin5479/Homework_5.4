@@ -19,7 +19,6 @@ namespace Homework_5._4
          string nameFileEnter2Array = "a.txt";
          string nameFileInput = "finish.txt";
          int row = VariousMethods.SizeRow();
-         int column = VariousMethods.SizeColumn();
          string pathFileEnter = Path.GetFullPath(nameFileEnter2Array);
          double[,] source = VariousMethods.EnterArrayDouble(row, column, pathFileEnter);
          if (source.GetLength(0) == 0)

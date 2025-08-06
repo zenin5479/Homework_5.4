@@ -57,7 +57,7 @@ namespace Homework_5._4
                j++;
             }
 
-            Console.WriteLine("В строке отрицательных элементов: {0}", count);
+            //Console.WriteLine("В строке отрицательных элементов: {0}", count);
             i++;
          }
 

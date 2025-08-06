@@ -16,26 +16,26 @@ namespace Homework_5._4
    {
       static void Main(string[] args)
       {
-         string name1Array = "P";
-         string name2Array = "A";
-         string nameFile1Array = "p.txt";
-         string nameFile2Array = "a.txt";
+         string name1DArray = "P";
+         string name2DArray = "A";
+         string nameFile1DArray = "p.txt";
+         string nameFile2DArray = "a.txt";
          string nameFileInput = "finish.txt";
          int row = MethodsFor2DArray.SizeRow();
-         string pathFile1Array = Path.GetFullPath(nameFile1Array);
-         string pathFile2Array = Path.GetFullPath(nameFile2Array);
+         string pathFile1Array = Path.GetFullPath(nameFile1DArray);
+         string pathFile2Array = Path.GetFullPath(nameFile2DArray);
 
-         double[] source1Array = Enter1DArrayDouble(nameFile1Array, name1Array);
+         double[] source1Array = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
          double[,] source2Array = MethodsFor2DArray.EnterArrayDouble(row, row, pathFile2Array);
 
          if (source2Array.GetLength(0) == 0)
          {
-            Console.WriteLine("Файл {0} пуст", nameFile2Array);
+            Console.WriteLine("Файл {0} пуст", nameFile2DArray);
          }
          else
          {
             double[,] input2Array = MethodsFor2DArray.InputArrayDouble(source2Array, row, row);
-            int Negative2Array = SearchingNegativeDouble(input2Array);
+            int negative2Array = SearchingNegativeDouble(input2Array);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);
             //File.Create(pathFileInput).Close();

@@ -15,10 +15,8 @@ namespace Homework_5._4
    {
       static void Main(string[] args)
       {
-         string nameEnter1Array = "A";
-         string nameEnter2Array = "B";
-
-
+         string nameEnter1Array = "P";
+         string nameEnter2Array = "A";
          string nameFileEnter1Array = "p.txt";
          string nameFileEnter2Array = "a.txt";
          string nameFileInput = "finish.txt";

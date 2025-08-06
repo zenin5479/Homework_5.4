@@ -35,8 +35,8 @@ namespace Homework_5._4
          }
          else
          {
-            double[,] input2Array = MethodsFor2DArray.InputArrayDouble(source2DArray, row, row);
-            int negative2Array = SearchingNegativeDouble(input2Array);
+            double[,] input2DArray = MethodsFor2DArray.InputArrayDouble(source2DArray, row, row);
+            int negative2DArray = SearchingNegativeDouble(input2DArray);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);
             //File.Create(pathFileInput).Close();

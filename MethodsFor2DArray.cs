@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Homework_5._4
 {
-   public class VariousMethods
+   public class MethodsFor2DArray
    {
       public static int SizeRow()
       {
@@ -1278,7 +1278,7 @@ namespace Homework_5._4
          //Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[inputArray.GetLength(0)];
-         string subLine = null;
+         string subLine;
          int row = 0;
          while (row < inputArray.GetLength(0))
          {

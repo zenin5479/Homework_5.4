@@ -21,12 +21,12 @@ namespace Homework_5._4
          string nameFile1Array = "p.txt";
          string nameFile2Array = "a.txt";
          string nameFileInput = "finish.txt";
-         int row = VariousMethods.SizeRow();
+         int row = MethodsFor2DArray.SizeRow();
          string pathFile1Array = Path.GetFullPath(nameFile1Array);
          string pathFile2Array = Path.GetFullPath(nameFile2Array);
 
          double[] source1Array = Enter1DArrayDouble(nameFile1Array, name1Array);
-         double[,] source2Array = VariousMethods.EnterArrayDouble(row, row, pathFile2Array);
+         double[,] source2Array = MethodsFor2DArray.EnterArrayDouble(row, row, pathFile2Array);
 
          if (source2Array.GetLength(0) == 0)
          {
@@ -34,7 +34,7 @@ namespace Homework_5._4
          }
          else
          {
-            double[,] input2Array = VariousMethods.InputArrayDouble(source2Array, row, row);
+            double[,] input2Array = MethodsFor2DArray.InputArrayDouble(source2Array, row, row);
             int Negative2Array = SearchingNegativeDouble(input2Array);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);

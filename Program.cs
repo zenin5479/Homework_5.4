@@ -21,9 +21,14 @@ namespace Homework_5._4
          string nameFileEnter2Array = "a.txt";
          string nameFileInput = "finish.txt";
          int row = VariousMethods.SizeRow();
-         string pathFileEnter = Path.GetFullPath(nameFileEnter2Array);
+         string pathFile1Array = Path.GetFullPath(nameFileEnter1Array);
+         string pathFile2Array = Path.GetFullPath(nameFileEnter2Array);
+         
          // Написать метод ввода для 1Array
-         double[,] source = VariousMethods.EnterArrayDouble(row, row, pathFileEnter);
+        double[] source2 = VariousMethods.Enter1DArrayDouble(nameFileEnter1Array, nameEnter1Array);
+         
+         double[,] source = VariousMethods.EnterArrayDouble(row, row, pathFile2Array);
+         
          if (source.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileEnter2Array);

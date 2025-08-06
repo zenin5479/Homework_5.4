@@ -24,7 +24,6 @@ namespace Homework_5._4
          string pathFile1Array = Path.GetFullPath(nameFile1Array);
          string pathFile2Array = Path.GetFullPath(nameFile2Array);
 
-         // Написать метод ввода для 1Array
          double[] source1Array = VariousMethods.Enter1DArrayDouble(nameFile1Array, name1Array);
          double[,] source2Array = VariousMethods.EnterArrayDouble(row, row, pathFile2Array);
 

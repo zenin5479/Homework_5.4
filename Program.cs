@@ -34,8 +34,8 @@ namespace Homework_5._4
          }
          else
          {
-            double[,] inputArray = VariousMethods.InputArrayDouble(source2Array, row, row);
-            int sumRow = SearchingNegativeDouble(inputArray);
+            double[,] input2Array = VariousMethods.InputArrayDouble(source2Array, row, row);
+            int Negative2Array = SearchingNegativeDouble(input2Array);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);
             //File.Create(pathFileInput).Close();
@@ -45,7 +45,7 @@ namespace Homework_5._4
 
          Console.ReadKey();
       }
-      
+
       public static double[] Enter1DArrayDouble(string path, string nameArray)
       {
          string stroka = null;
@@ -135,6 +135,24 @@ namespace Homework_5._4
          }
 
          return arrayDouble;
+      }
+
+      public static double[] InputArrayDouble(double[] inputArray, int n, string nameArray)
+      {
+         Console.WriteLine("Массив вещественных чисел {0} для проведения поиска:", nameArray);
+         double[] outputArray = new double[n];
+         int i = 0;
+         while (i < n)
+         {
+            outputArray[i] = inputArray[i];
+            //Console.Write("{0:f2} ", outputArray[i]);
+            //Console.Write("{0:f} ", outputArray[i]);
+            Console.Write("{0} ", outputArray[i]);
+            i++;
+         }
+
+         Console.WriteLine();
+         return outputArray;
       }
 
       public static int SearchingNegativeDouble(double[,] inputArray)

@@ -26,16 +26,16 @@ namespace Homework_5._4
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
 
-         double[] source1Array = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
-         double[,] source2Array = MethodsFor2DArray.EnterArrayDouble(row, row, pathFile2DArray);
+         double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
+         double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(row, row, pathFile2DArray);
 
-         if (source2Array.GetLength(0) == 0)
+         if (source2DArray.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFile2DArray);
          }
          else
          {
-            double[,] input2Array = MethodsFor2DArray.InputArrayDouble(source2Array, row, row);
+            double[,] input2Array = MethodsFor2DArray.InputArrayDouble(source2DArray, row, row);
             int negative2Array = SearchingNegativeDouble(input2Array);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);

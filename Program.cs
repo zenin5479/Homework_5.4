@@ -28,7 +28,7 @@ namespace Homework_5._4
          else
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, row);
-            double[] sumRow = VariousMethods.SumRowElements(inputArray);
+            int sumRow = SearchingNegativeDouble(inputArray);
             double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();

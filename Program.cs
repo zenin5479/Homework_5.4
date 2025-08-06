@@ -156,6 +156,7 @@ namespace Homework_5._4
          return outputArray;
       }
 
+      // Новый метод для 2DArray
       public static int SearchingNegativeDouble(double[,] inputArray)
       {
          int count = 0;

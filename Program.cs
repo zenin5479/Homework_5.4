@@ -15,27 +15,26 @@ namespace Homework_5._4
    {
       static void Main(string[] args)
       {
-         string nameEnter1Array = "P";
-         string nameEnter2Array = "A";
-         string nameFileEnter1Array = "p.txt";
-         string nameFileEnter2Array = "a.txt";
+         string name1Array = "P";
+         string name2Array = "A";
+         string nameFile1Array = "p.txt";
+         string nameFile2Array = "a.txt";
          string nameFileInput = "finish.txt";
          int row = VariousMethods.SizeRow();
-         string pathFile1Array = Path.GetFullPath(nameFileEnter1Array);
-         string pathFile2Array = Path.GetFullPath(nameFileEnter2Array);
-         
+         string pathFile1Array = Path.GetFullPath(nameFile1Array);
+         string pathFile2Array = Path.GetFullPath(nameFile2Array);
+
          // Написать метод ввода для 1Array
-        double[] source2 = VariousMethods.Enter1DArrayDouble(nameFileEnter1Array, nameEnter1Array);
-         
-         double[,] source = VariousMethods.EnterArrayDouble(row, row, pathFile2Array);
-         
-         if (source.GetLength(0) == 0)
+         double[] source1Array = VariousMethods.Enter1DArrayDouble(nameFile1Array, name1Array);
+         double[,] source2Array = VariousMethods.EnterArrayDouble(row, row, pathFile2Array);
+
+         if (source2Array.GetLength(0) == 0)
          {
-            Console.WriteLine("Файл {0} пуст", nameFileEnter2Array);
+            Console.WriteLine("Файл {0} пуст", nameFile2Array);
          }
          else
          {
-            double[,] inputArray = VariousMethods.InputArrayDouble(source, row, row);
+            double[,] inputArray = VariousMethods.InputArrayDouble(source2Array, row, row);
             int sumRow = SearchingNegativeDouble(inputArray);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);

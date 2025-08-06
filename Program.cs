@@ -29,17 +29,17 @@ namespace Homework_5._4
          {
             double[,] inputArray = VariousMethods.InputArrayDouble(source, row, row);
             int sumRow = SearchingNegativeDouble(inputArray);
-            double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
-            string pathFileInput = Path.GetFullPath(nameFileInput);
-            File.Create(pathFileInput).Close();
-            string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
-            VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
+            //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
+            //string pathFileInput = Path.GetFullPath(nameFileInput);
+            //File.Create(pathFileInput).Close();
+            //string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
+            //VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
          }
 
          Console.ReadKey();
       }
 
-      public static int SearchingNegativeDouble(double[] inputArray)
+      public static int SearchingNegativeDouble(double[,] inputArray)
       {
          int count = 0;
          int i = 0;
@@ -49,7 +49,7 @@ namespace Homework_5._4
             while (j < inputArray.GetLength(1))
             {
 
-               if (inputArray[i] < 0)
+               if (inputArray[i, j] < 0)
                {
                   count++;
                }
@@ -57,10 +57,7 @@ namespace Homework_5._4
                j++;
             }
 
-
-
-
-
+            Console.WriteLine("В строке отрицательных элементов: {0}", count);
             i++;
          }
 

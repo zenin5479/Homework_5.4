@@ -266,8 +266,8 @@ namespace Homework_5._4
             int сolumn = 0;
             if (stroka != null)
             {
-               Console.WriteLine("Исходный строковый массив {0}:", nameArray);
-               Console.WriteLine(stroka);
+               //Console.WriteLine("Исходный строковый массив {0}:", nameArray);
+               //Console.WriteLine(stroka);
                while (symbolСount < stroka.Length)
                {
                   if (symbolSpace == stroka[symbolСount])

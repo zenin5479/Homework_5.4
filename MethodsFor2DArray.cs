@@ -74,23 +74,6 @@ namespace Homework_5._4
          return n;
       }
 
-      public static int SizeMatrix(string nameArray)
-      {
-         int n;
-         do
-         {
-            Console.WriteLine("Введите размер матрицы {0}:", nameArray);
-            int.TryParse(Console.ReadLine(), out n);
-            //n = Convert.ToInt32(Console.ReadLine());
-            if (n <= 0 || n > 20)
-            {
-               Console.WriteLine("Введено неверное значение");
-            }
-         } while (n <= 0 || n > 20);
-
-         return n;
-      }
-
       public static int SizeColumn(string nameArray)
       {
          int m;
@@ -106,6 +89,23 @@ namespace Homework_5._4
          } while (m <= 0 || m > 20);
 
          return m;
+      }
+
+      public static int SizeMatrix(string nameArray)
+      {
+         int n;
+         do
+         {
+            Console.WriteLine("Введите размер матрицы {0}:", nameArray);
+            int.TryParse(Console.ReadLine(), out n);
+            //n = Convert.ToInt32(Console.ReadLine());
+            if (n <= 0 || n > 20)
+            {
+               Console.WriteLine("Введено неверное значение");
+            }
+         } while (n <= 0 || n > 20);
+
+         return n;
       }
 
       public static double[,] EnterArrayDouble(int n, int m)

@@ -432,6 +432,30 @@ namespace Homework_5._4
          return outputArray;
       }
 
+      public static double[,] InputMatrixDouble(double[,] inputArray, int n)
+      {
+         Console.WriteLine("Двумерный массив вещественных чисел");
+         double[,] outputArray = new double[n, n];
+         int i = 0;
+         while (i < n)
+         {
+            int j = 0;
+            while (j < n)
+            {
+               outputArray[i, j] = inputArray[i, j];
+               //Console.Write("{0:f2} ", outputArray[i, j]);
+               //Console.Write("{0:f} ", outputArray[i, j]);
+               Console.Write("{0} ", outputArray[i, j]);
+               j++;
+            }
+
+            i++;
+            Console.WriteLine();
+         }
+
+         return outputArray;
+      }
+
       public static double[,] InputArrayDouble(int[,] inputArray, int n, int m, string nameArray)
       {
          Console.WriteLine("Двумерный массив вещественных чисел {0}:", nameArray);

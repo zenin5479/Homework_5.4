@@ -29,7 +29,7 @@ namespace Homework_5._4
          int row = MethodsFor2DArray.SizeRow();
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
-         double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(row, row, pathFile2DArray);
+         double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray);
 
          if (source2DArray.GetLength(0) == 0)
          {

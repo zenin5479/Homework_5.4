@@ -91,12 +91,12 @@ namespace Homework_5._4
          return m;
       }
 
-      public static int SizeMatrix(string nameArray)
+      public static int SizeMatrix(string nameMatrix)
       {
          int n;
          do
          {
-            Console.WriteLine("Введите размер матрицы {0}:", nameArray);
+            Console.WriteLine("Введите размер матрицы {0}:", nameMatrix);
             int.TryParse(Console.ReadLine(), out n);
             //n = Convert.ToInt32(Console.ReadLine());
             if (n <= 0 || n > 20)

@@ -107,7 +107,7 @@ namespace Homework_5._4
 
          return n;
       }
-      
+
       public static double[,] EnterArrayDouble(string path)
       {
          // Двумерный массив вещественных чисел

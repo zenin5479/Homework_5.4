@@ -25,11 +25,10 @@ namespace Homework_5._4
          double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
          double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n, name1DArray);
 
-         // Написать метод для матрицы n x n
          int row = MethodsFor2DArray.SizeRow();
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
-         double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray);
+         double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray, name2DArray);
 
          if (source2DArray.GetLength(0) == 0)
          {
@@ -37,6 +36,7 @@ namespace Homework_5._4
          }
          else
          {
+            // Написать метод для матрицы n x n
             double[,] input2DArray = MethodsFor2DArray.InputArrayDouble(source2DArray, row, row);
             int negative2DArray = SearchingNegativeDouble(input2DArray);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);

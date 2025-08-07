@@ -79,7 +79,7 @@ namespace Homework_5._4
          int n;
          do
          {
-            Console.WriteLine("Введите количество строк массива {0}:", nameArray);
+            Console.WriteLine("Введите размер матрицы {0}:", nameArray);
             int.TryParse(Console.ReadLine(), out n);
             //n = Convert.ToInt32(Console.ReadLine());
             if (n <= 0 || n > 20)

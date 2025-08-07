@@ -515,7 +515,7 @@ namespace Homework_5._4
 
       public static double[,] InputArrayDouble(double[,] inputArray, int n, int m)
       {
-         Console.WriteLine("Двумерный числовой массив для проведения поиска");
+         Console.WriteLine("Двумерный массив вещественных чисел");
          double[,] outputArray = new double[n, m];
          int i = 0;
          while (i < n)

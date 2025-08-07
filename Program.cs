@@ -23,6 +23,7 @@ namespace Homework_5._4
          string nameFileInput = "finish.txt";
          int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
          double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
+         double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n);
 
          // Написать метод для матрицы n x n
          int row = MethodsFor2DArray.SizeRow();

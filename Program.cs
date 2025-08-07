@@ -22,6 +22,8 @@ namespace Homework_5._4
          string nameFile2DArray = "a.txt";
          string nameFileInput = "finish.txt";
          // Написать метод для матрицы n x n
+         int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
+
          int row = MethodsFor2DArray.SizeRow();
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);

@@ -74,6 +74,23 @@ namespace Homework_5._4
          return n;
       }
 
+      public static int SizeMatrix(string nameArray)
+      {
+         int n;
+         do
+         {
+            Console.WriteLine("Введите количество строк массива {0}:", nameArray);
+            int.TryParse(Console.ReadLine(), out n);
+            //n = Convert.ToInt32(Console.ReadLine());
+            if (n <= 0 || n > 20)
+            {
+               Console.WriteLine("Введено неверное значение");
+            }
+         } while (n <= 0 || n > 20);
+
+         return n;
+      }
+
       public static int SizeColumn(string nameArray)
       {
          int m;

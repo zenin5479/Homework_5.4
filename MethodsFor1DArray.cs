@@ -286,7 +286,7 @@ namespace Homework_5._4
                //Console.WriteLine("Количество столбцов {0}:", сolumn);
 
                // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-               Console.WriteLine("Массив вещественных чисел {0}:", nameArray);
+               //Console.WriteLine("Массив вещественных чисел {0}:", nameArray);
                // Одномерный массив вещественных чисел
                arrayDouble = new double[сolumn];
                // Построитель строк
@@ -305,7 +305,7 @@ namespace Homework_5._4
                   {
                      string subLine = stringModified.ToString();
                      arrayDouble[сolumn] = Convert.ToDouble(subLine);
-                     Console.Write(arrayDouble[сolumn] + " ");
+                     //Console.Write(arrayDouble[сolumn] + " ");
                      stringModified.Clear();
                      сolumn++;
                   }
@@ -314,7 +314,7 @@ namespace Homework_5._4
                   {
                      string subLine = stringModified.ToString();
                      arrayDouble[сolumn] = Convert.ToDouble(subLine);
-                     Console.Write(arrayDouble[сolumn]);
+                     //Console.Write(arrayDouble[сolumn]);
                      stringModified.Clear();
                      сolumn++;
                   }
@@ -324,7 +324,7 @@ namespace Homework_5._4
             }
 
             streamReader.Close();
-            Console.WriteLine();
+            //Console.WriteLine();
          }
 
          return arrayDouble;
@@ -366,7 +366,7 @@ namespace Homework_5._4
 
       public static double[] InputArrayDouble(double[] inputArray, int n, string nameArray)
       {
-         Console.WriteLine("Массив вещественных чисел {0} для проведения поиска:", nameArray);
+         Console.WriteLine("Одномерный массив вещественных чисел {0}:", nameArray);
          double[] outputArray = new double[n];
          int i = 0;
          while (i < n)

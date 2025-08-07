@@ -366,7 +366,7 @@ namespace Homework_5._4
 
       public static double[] InputArrayDouble(double[] inputArray, int n, string nameArray)
       {
-         //Console.WriteLine("Массив вещественных чисел {0} для проведения поиска:", nameArray);
+         Console.WriteLine("Массив вещественных чисел {0} для проведения поиска:", nameArray);
          double[] outputArray = new double[n];
          int i = 0;
          while (i < n)

@@ -434,6 +434,7 @@ namespace Homework_5._4
 
       public static double[,] InputMatrixDouble(double[,] inputArray, int n)
       {
+         
          Console.WriteLine("Двумерный массив вещественных чисел");
          double[,] outputArray = new double[n, n];
          int i = 0;

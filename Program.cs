@@ -45,24 +45,6 @@ namespace Homework_5._4
             //string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
             //VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
          }
-         
-         
-         
-         
-         if ()
-         {
-            
-         }
-         else
-         {
-            
-         }
-
-         
-
-
-
-
 
          Console.ReadKey();
       }

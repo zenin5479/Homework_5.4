@@ -1082,6 +1082,29 @@ namespace Homework_5._4
          return count;
       }
 
+      public static int SearchingNegativeDouble(double[] inputArray, string nameArray)
+      {
+         int count = 0;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            if (inputArray[i] < 0)
+            {
+               count++;
+            }
+
+            i++;
+         }
+
+         Console.WriteLine("В массиве {0} отрицательных элементов: {1}", nameArray, count);
+         if (count == 0)
+         {
+            Console.WriteLine("В массиве {0} нет отрицательных элементов", nameArray);
+         }
+
+         return count;
+      }
+
       public static int SearchingNegativeInt(int[] inputArray, string nameArray)
       {
          int count = 0;
@@ -1105,28 +1128,7 @@ namespace Homework_5._4
          return count;
       }
 
-      public static int SearchingNegativeDouble(double[] inputArray, string nameArray)
-      {
-         int count = 0;
-         int i = 0;
-         while (i < inputArray.Length)
-         {
-            if (inputArray[i] < 0)
-            {
-               count++;
-            }
-
-            i++;
-         }
-
-         Console.WriteLine("В массиве {0} отрицательных элементов: {1}", nameArray, count);
-         if (count == 0)
-         {
-            Console.WriteLine("В массиве {0} нет отрицательных элементов", nameArray);
-         }
-
-         return count;
-      }
+      
 
       public static string[] OutputStringArrayInt(int[] inputArray)
       {

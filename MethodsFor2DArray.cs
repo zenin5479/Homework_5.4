@@ -1108,6 +1108,11 @@ namespace Homework_5._4
          return min;
       }
 
+      public static double ComparisonValueDouble(double minOne, double minTwo)
+      {
+         return minOne * minTwo;
+      }
+
       public static double CalculatingValueDouble(double minOne, double minTwo, double minThree)
       {
          return minOne * minTwo - minThree;

@@ -20,14 +20,16 @@ namespace Homework_5._4
          string nameFile1DArray = "p.txt";
          string nameFile2DArray = "a.txt";
          string nameFileInput = "finish.txt";
-         int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
-         double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
-         
-         double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n, name1DArray);
-
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
+         int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
+         double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
+
          double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray, name2DArray);
+         double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n, name1DArray);
+
+
+
 
          if (source2DArray.GetLength(0) == 0)
          {

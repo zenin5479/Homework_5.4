@@ -35,7 +35,7 @@ namespace Homework_5._4
          else
          {
             // Написать метод для матрицы n x n
-            double[,] input2DArray = MethodsFor2DArray.InputMatrixDouble(source2DArray, n);
+            double[,] input2DArray = MethodsFor2DArray.InputMatrixDouble(source2DArray, n, name2DArray);
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);

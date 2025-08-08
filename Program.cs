@@ -35,7 +35,8 @@ namespace Homework_5._4
             double[,] input2DArray = MethodsFor2DArray.InputMatrixDouble(source2DArray, n, name2DArray);
             int negative1DArray = MethodsFor1DArray.SearchingNegativeDouble(input1DArray, name1DArray);
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray, name2DArray);
-            
+
+
             //string pathFileInput = Path.GetFullPath(nameFileInput);
             //File.Create(pathFileInput).Close();
             //string[] arrayLines = VariousMethods.OutputArrayString(sortArray);

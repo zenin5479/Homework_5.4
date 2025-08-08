@@ -1128,8 +1128,6 @@ namespace Homework_5._4
          return count;
       }
 
-
-
       public static string[] OutputStringArrayInt(int[] inputArray)
       {
          // Объединение одномерного массива int[]

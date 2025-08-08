@@ -1113,11 +1113,6 @@ namespace Homework_5._4
          return negative1DArray > negative2DArray;
       }
 
-      bool sravnenie(int count, int counter)
-      {
-         return count > counter;
-      }
-
       public static double CalculatingValueDouble(double minOne, double minTwo, double minThree)
       {
          return minOne * minTwo - minThree;

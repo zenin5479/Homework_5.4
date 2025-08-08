@@ -24,7 +24,6 @@ namespace Homework_5._4
          int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
          double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
          double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n, name1DArray);
-
          int row = MethodsFor2DArray.SizeRow();
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);

@@ -24,9 +24,8 @@ namespace Homework_5._4
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
          int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
          double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
-
          double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray, name2DArray);
-         double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n, name1DArray);
+         
 
 
 
@@ -37,6 +36,7 @@ namespace Homework_5._4
          }
          else
          {
+            double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n, name1DArray);
             double[,] input2DArray = MethodsFor2DArray.InputMatrixDouble(source2DArray, n, name2DArray);
             int negative1DArray = MethodsFor1DArray.SearchingNegativeDouble(input1DArray, name1DArray);
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray);

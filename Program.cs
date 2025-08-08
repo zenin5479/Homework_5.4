@@ -27,7 +27,11 @@ namespace Homework_5._4
          double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray, name2DArray);
          if (source2DArray.GetLength(0) == 0)
          {
-            Console.WriteLine("Файл {0} пуст", nameFile2DArray);
+
+         }
+         else if (source2DArray.GetLength(0) == 0)
+         {
+            
          }
          else
          {
@@ -41,6 +45,24 @@ namespace Homework_5._4
             //string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
             //VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
          }
+         
+         
+         
+         
+         if ()
+         {
+            Console.WriteLine("Файл {0} пуст", nameFile2DArray);
+         }
+         else
+         {
+            
+         }
+
+         
+
+
+
+
 
          Console.ReadKey();
       }

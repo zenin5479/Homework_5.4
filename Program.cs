@@ -36,7 +36,7 @@ namespace Homework_5._4
          else
          {
             double[,] input2DArray = MethodsFor2DArray.InputMatrixDouble(source2DArray, n, name2DArray);
-            int negative1DArray = MethodsFor1DArray.SearchingNegativeDouble(input1DArray);
+            int negative1DArray = MethodsFor1DArray.SearchingNegativeDouble(input1DArray, name1DArray);
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);

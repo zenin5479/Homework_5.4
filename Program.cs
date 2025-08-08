@@ -25,7 +25,7 @@ namespace Homework_5._4
          int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
          double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
          double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray, name2DArray);
-         if (source1DArray.GetLength(0) == 0)
+         if (source1DArray.Length == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFile1DArray);
          }

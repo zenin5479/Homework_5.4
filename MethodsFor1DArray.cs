@@ -765,7 +765,7 @@ namespace Homework_5._4
 
       public static bool CheckSetValue(int[] inputArray, int setValue)
       {
-         // Прверка наличия элемента в массиве
+         // Проверка наличия элемента в массиве
          int i = 0;
          bool fl = true;
          while (i < inputArray.Length && fl)

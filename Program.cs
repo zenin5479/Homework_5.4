@@ -28,6 +28,7 @@ namespace Homework_5._4
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
          double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray, name2DArray);
+
          if (source2DArray.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFile2DArray);
@@ -36,7 +37,7 @@ namespace Homework_5._4
          {
             // Написать метод для матрицы n x n
             double[,] input2DArray = MethodsFor2DArray.InputArrayDouble(source2DArray, row, row);
-            int negative2DArray = SearchingNegativeDouble(input2DArray);
+            int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);
             //File.Create(pathFileInput).Close();
@@ -154,36 +155,6 @@ namespace Homework_5._4
 
          Console.WriteLine();
          return outputArray;
-      }
-
-      // Новый метод для 2DArray
-      public static int SearchingNegativeDouble(double[,] inputArray)
-      {
-         int count = 0;
-         int i = 0;
-         while (i < inputArray.GetLength(0))
-         {
-            int j = 0;
-            while (j < inputArray.GetLength(1))
-            {
-               if (inputArray[i, j] < 0)
-               {
-                  count++;
-               }
-
-               j++;
-            }
-
-            i++;
-         }
-
-         Console.WriteLine("В массиве отрицательных элементов: {0}", count);
-         if (count == 0)
-         {
-            Console.WriteLine("В массиве нет отрицательных элементов");
-         }
-
-         return count;
       }
 
       public static int SearchingNegativeDouble(double[,] inputArray, string nameArray)

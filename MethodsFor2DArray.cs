@@ -940,6 +940,35 @@ namespace Homework_5._4
          return arrayMax;
       }
 
+      public static int SearchingNegativeDouble(double[,] inputArray)
+      {
+         int count = 0;
+         int i = 0;
+         while (i < inputArray.GetLength(0))
+         {
+            int j = 0;
+            while (j < inputArray.GetLength(1))
+            {
+               if (inputArray[i, j] < 0)
+               {
+                  count++;
+               }
+
+               j++;
+            }
+
+            i++;
+         }
+
+         Console.WriteLine("В массиве отрицательных элементов: {0}", count);
+         if (count == 0)
+         {
+            Console.WriteLine("В массиве нет отрицательных элементов");
+         }
+
+         return count;
+      }
+
       public static bool SearchingPositivDouble(double[,] search)
       {
          bool fl = true;

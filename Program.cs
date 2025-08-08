@@ -22,6 +22,7 @@ namespace Homework_5._4
          string nameFileInput = "finish.txt";
          int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
          double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
+         
          double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n, name1DArray);
 
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
@@ -35,6 +36,7 @@ namespace Homework_5._4
          else
          {
             double[,] input2DArray = MethodsFor2DArray.InputMatrixDouble(source2DArray, n, name2DArray);
+            int negative1DArray = MethodsFor1DArray.SearchingNegativeDouble(input1DArray);
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray);
             //double[,] sortArray = VariousMethods.BubbleSortArray(inputArray, sumRow);
             //string pathFileInput = Path.GetFullPath(nameFileInput);

@@ -1109,9 +1109,9 @@ namespace Homework_5._4
       }
 
       //
-      public static bool ComparisonNegativeDouble(double negative1DArray, double negative2DArray)
+      public static bool ComparisonNegativeDouble(double negativeOne, double negativeTwo)
       {
-         return negative1DArray > negative2DArray;
+         return negativeOne > negativeTwo;
       }
 
       public static double CalculatingValueDouble(double minOne, double minTwo, double minThree)

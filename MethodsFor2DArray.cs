@@ -1109,7 +1109,7 @@ namespace Homework_5._4
       }
 
       //
-      public static bool ComparisonnegativeDouble(double negative1DArray, double negative2DArray)
+      public static bool ComparisonNegativeDouble(double negative1DArray, double negative2DArray)
       {
          return negative1DArray > negative2DArray;
       }

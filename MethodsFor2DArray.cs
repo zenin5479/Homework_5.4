@@ -1108,6 +1108,7 @@ namespace Homework_5._4
          return min;
       }
 
+      //
       public static bool ComparisonValueDouble(double negative1DArray, double negative2DArray)
       {
          return negative1DArray > negative2DArray;

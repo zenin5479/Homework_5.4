@@ -41,6 +41,7 @@ namespace Homework_5._4
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray, name2DArray);
 
             bool comparison = MethodsFor2DArray.ComparisonNegativeDouble(negative1DArray, negative2DArray);
+            Console.WriteLine(comparison);
 
             //string pathFileInput = Path.GetFullPath(nameFileInput);
             //File.Create(pathFileInput).Close();

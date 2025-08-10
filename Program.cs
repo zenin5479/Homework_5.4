@@ -60,25 +60,12 @@ namespace Homework_5._4
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
          int i = 0;
-         while (i < inputArray.GetLength(0))
+         int j = inputArray.GetLength(0) - 1;
+         int k = 0;
+         while (k < inputArray.GetLength(1))
          {
-            int j = i + 1;
-            while (j < inputArray.GetLength(1))
-            {
-               int k = 0;
-               while (k < inputArray.GetLength(1))
-               {
-                  double tempArray = inputArray[i, k];
-                  inputArray[i, k] = inputArray[j, k];
-                  inputArray[j, k] = tempArray;
-                  k++;
-               }
-
-
-               j++;
-            }
-
-            i++;
+            inputArray[i, k] = inputArray[j, k];
+            k++;
          }
 
          int l = 0;

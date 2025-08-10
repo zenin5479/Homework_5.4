@@ -44,7 +44,7 @@ namespace Homework_5._4
 
             if (comparison)
             {
-               double[,] sortArray = swapLastLine(input2DArray);
+               double[,] sortArray = SwapLastLine(input2DArray);
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();
                string[] arrayLines = MethodsFor2DArray.OutputArrayString(sortArray);
@@ -55,7 +55,7 @@ namespace Homework_5._4
          Console.ReadKey();
       }
 
-      public static double[,] swapLastLine(double[,] inputArray)
+      public static double[,] SwapLastLine(double[,] inputArray)
       {
          //  swapLastLine
          // replacement

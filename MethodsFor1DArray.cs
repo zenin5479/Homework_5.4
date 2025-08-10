@@ -1105,6 +1105,11 @@ namespace Homework_5._4
          return count;
       }
 
+      public static bool ComparisonNegativeDouble(double negativeOne, double negativeTwo)
+      {
+         return negativeOne > negativeTwo;
+      }
+
       public static int SearchingNegativeInt(int[] inputArray, string nameArray)
       {
          int count = 0;

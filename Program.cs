@@ -50,8 +50,6 @@ namespace Homework_5._4
                string[] arrayLines = MethodsFor2DArray.OutputArrayString(sortArray);
                MethodsFor2DArray.FileWriteArrayString(arrayLines, nameFileInput);
             }
-
-
          }
 
          Console.ReadKey();

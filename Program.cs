@@ -41,17 +41,18 @@ namespace Homework_5._4
             int negative1DArray = MethodsFor1DArray.SearchingNegativeDouble(input1DArray, name1DArray);
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray, name2DArray);
             bool comparison = MethodsFor2DArray.ComparisonNegativeDouble(negative1DArray, negative2DArray);
-            if (comparison)
+            if (!comparison)
+            {
+               Console.WriteLine("В одномерном массиве {0} меньше отрицательных элементов чем в двумерном массиве {1}",
+                  name1DArray, name2DArray);
+            }
+            else
             {
                double[,] sortArray = SwapLastLine(input2DArray);
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();
                string[] arrayLines = MethodsFor2DArray.OutputArrayString(sortArray);
                MethodsFor2DArray.FileWriteArrayString(arrayLines, nameFileInput);
-            }
-            else
-            {
-               Console.WriteLine("В одномерном массиве {0} меньше отрицательных элементов чем в двумерном массиве {1}", name1DArray, name2DArray);
             }
          }
 

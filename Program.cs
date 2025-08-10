@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 
 // Обработка массивов подпрограммами
@@ -50,6 +51,8 @@ namespace Homework_5._4
             }
             else
             {
+               Console.WriteLine("В массиве {0} отрицательных элементов: {1}", nameArray, count);
+
                Console.WriteLine("Файл {0} пуст", nameFile1DArray); //
                Console.WriteLine("Файл {0} пуст", nameFile2DArray); //
             }

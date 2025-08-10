@@ -23,7 +23,7 @@ namespace Homework_5._4
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
          int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
-         double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(nameFile1DArray, name1DArray);
+         double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(pathFile1DArray, name1DArray);
          double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray, name2DArray);
          if (source1DArray.Length == 0)
          {
@@ -47,7 +47,7 @@ namespace Homework_5._4
             else
             {
                Console.WriteLine("В одномерном массиве {0} больше отрицательных элементов чем в двумерном массиве {1}", name1DArray, name2DArray);
-               double[,] sortArray = SwapLastLine(input2DArray);
+               double[,] sortArray = MethodsFor2DArray.SwapLastLine(input2DArray);
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();
                string[] arrayLines = MethodsFor2DArray.OutputArrayString(sortArray);
@@ -56,47 +56,6 @@ namespace Homework_5._4
          }
 
          Console.ReadKey();
-      }
-
-      public static double[,] SwapLastLine(double[,] inputArray)
-      {
-         Console.WriteLine("Замена первой строки двумерного массива последней");
-         int i = 0;
-         int j = inputArray.GetLength(0) - 1;
-         int k = 0;
-         while (k < inputArray.GetLength(1))
-         {
-            inputArray[i, k] = inputArray[j, k];
-            k++;
-         }
-
-         int l = 0;
-         while (l < inputArray.GetLength(0))
-         {
-            int m = 0;
-            while (m < inputArray.GetLength(1))
-            {
-               if (m == inputArray.GetLength(1) - 1)
-               {
-                  //Console.Write(inputArray[l, m]);
-                  Console.Write("{0:f}", inputArray[l, m]);
-                  //Console.Write("{0:f2}", inputArray[l, m]);
-               }
-               else
-               {
-                  //Console.Write(inputArray[l, m] + " ");
-                  Console.Write("{0:f} ", inputArray[l, m]);
-                  //Console.Write("{0:f2} ", inputArray[l, m]);
-               }
-
-               m++;
-            }
-
-            l++;
-            Console.WriteLine();
-         }
-
-         return inputArray;
       }
    }
 }

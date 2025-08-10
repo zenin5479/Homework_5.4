@@ -1108,7 +1108,6 @@ namespace Homework_5._4
          return min;
       }
 
-      //
       public static bool ComparisonNegativeDouble(double negativeOne, double negativeTwo)
       {
          return negativeOne > negativeTwo;

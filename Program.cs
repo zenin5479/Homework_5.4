@@ -44,20 +44,20 @@ namespace Homework_5._4
 
             if (comparison)
             {
-               BubbleSortArray(input2DArray);
-               Console.WriteLine(comparison);
+               double[,] sortArray = BubbleSortArray(input2DArray);
+               string pathFileInput = Path.GetFullPath(nameFileInput);
+               File.Create(pathFileInput).Close();
+               string[] arrayLines = MethodsFor2DArray.OutputArrayString(sortArray);
+               MethodsFor2DArray.FileWriteArrayString(arrayLines, nameFileInput);
             }
 
-            //string pathFileInput = Path.GetFullPath(nameFileInput);
-            //File.Create(pathFileInput).Close();
-            //string[] arrayLines = VariousMethods.OutputArrayString(sortArray);
-            //VariousMethods.FileWriteArrayString(arrayLines, nameFileInput);
+
          }
 
          Console.ReadKey();
       }
 
-      public static void BubbleSortArray(double[,] inputArray)
+      public static double[,] BubbleSortArray(double[,] inputArray)
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
          int i = 0;
@@ -94,6 +94,8 @@ namespace Homework_5._4
             l++;
             Console.WriteLine();
          }
+
+         return inputArray;
       }
    }
 }

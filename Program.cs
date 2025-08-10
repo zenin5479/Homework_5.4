@@ -39,9 +39,7 @@ namespace Homework_5._4
             double[,] input2DArray = MethodsFor2DArray.InputMatrixDouble(source2DArray, n, name2DArray);
             int negative1DArray = MethodsFor1DArray.SearchingNegativeDouble(input1DArray, name1DArray);
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray, name2DArray);
-
             bool comparison = MethodsFor2DArray.ComparisonNegativeDouble(negative1DArray, negative2DArray);
-
             if (comparison)
             {
                double[,] sortArray = SwapLastLine(input2DArray);
@@ -49,6 +47,11 @@ namespace Homework_5._4
                File.Create(pathFileInput).Close();
                string[] arrayLines = MethodsFor2DArray.OutputArrayString(sortArray);
                MethodsFor2DArray.FileWriteArrayString(arrayLines, nameFileInput);
+            }
+            else
+            {
+               Console.WriteLine("Файл {0} пуст", nameFile1DArray);
+               Console.WriteLine("Файл {0} пуст", nameFile2DArray);
             }
          }
 

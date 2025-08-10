@@ -1030,10 +1030,10 @@ namespace Homework_5._4
             i++;
          }
 
-         Console.WriteLine("В массиве {0} отрицательных элементов: {1}", nameArray, count);
+         Console.WriteLine("В двумерном массиве {0} отрицательных элементов: {1}", nameArray, count);
          if (count == 0)
          {
-            Console.WriteLine("В массиве нет отрицательных элементов");
+            Console.WriteLine("В двумерном массиве нет отрицательных элементов");
          }
 
          return count;

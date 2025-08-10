@@ -51,7 +51,7 @@ namespace Homework_5._4
             }
             else
             {
-               Console.WriteLine("В массиве {0} отрицательных элементов: {1}", name1DArray, name2DArray);
+               Console.WriteLine("В одномерном массиве {0} меньше отрицательных элементов чем в массиве {1}", name1DArray, name2DArray);
             }
          }
 

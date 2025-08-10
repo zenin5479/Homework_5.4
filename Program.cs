@@ -50,8 +50,8 @@ namespace Homework_5._4
             }
             else
             {
-               Console.WriteLine("Файл {0} пуст", nameFile1DArray);
-               Console.WriteLine("Файл {0} пуст", nameFile2DArray);
+               Console.WriteLine("Файл {0} пуст", nameFile1DArray); //
+               Console.WriteLine("Файл {0} пуст", nameFile2DArray); //
             }
          }
 

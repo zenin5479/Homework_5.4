@@ -57,7 +57,7 @@ namespace Homework_5._4
 
       public static double[,] SwapLastLine(double[,] inputArray)
       {
-         Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
+         Console.WriteLine("Замена первой строки двумерного массива последней");
          int i = 0;
          int j = inputArray.GetLength(0) - 1;
          int k = 0;

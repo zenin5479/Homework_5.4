@@ -57,7 +57,6 @@ namespace Homework_5._4
 
       public static double[,] SwapLastLine(double[,] inputArray)
       {
-         //  swapLastLine
          // replacement
          // 
 

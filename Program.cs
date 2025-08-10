@@ -44,6 +44,7 @@ namespace Homework_5._4
 
             if (comparison)
             {
+               BubbleSortArray(input2DArray);
                Console.WriteLine(comparison);
             }
 
@@ -56,7 +57,7 @@ namespace Homework_5._4
          Console.ReadKey();
       }
 
-      public static double[,] BubbleSortArray(double[,] inputArray)
+      public static void BubbleSortArray(double[,] inputArray)
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
          int i = 0;
@@ -93,8 +94,6 @@ namespace Homework_5._4
             l++;
             Console.WriteLine();
          }
-
-         return inputArray;
       }
    }
 }

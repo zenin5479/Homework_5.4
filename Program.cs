@@ -57,6 +57,10 @@ namespace Homework_5._4
 
       public static double[,] BubbleSortArray(double[,] inputArray)
       {
+         // rearranging the last line
+         // replacement
+         // swap
+
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
          int i = 0;
          int j = inputArray.GetLength(0) - 1;

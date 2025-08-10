@@ -44,7 +44,7 @@ namespace Homework_5._4
 
             if (comparison)
             {
-               double[,] sortArray = BubbleSortArray(input2DArray);
+               double[,] sortArray = swapLastLine(input2DArray);
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();
                string[] arrayLines = MethodsFor2DArray.OutputArrayString(sortArray);
@@ -55,11 +55,11 @@ namespace Homework_5._4
          Console.ReadKey();
       }
 
-      public static double[,] BubbleSortArray(double[,] inputArray)
+      public static double[,] swapLastLine(double[,] inputArray)
       {
-         // rearranging the last line
+         //  swapLastLine
          // replacement
-         // swap
+         // 
 
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
          int i = 0;

@@ -47,8 +47,7 @@ namespace Homework_5._4
             }
             else
             {
-               Console.WriteLine("В одномерном массиве {0} больше отрицательных элементов чем в двумерном массиве {1}",
-                  name1DArray, name2DArray);
+               Console.WriteLine("В одномерном массиве {0} больше отрицательных элементов чем в двумерном массиве {1}", name1DArray, name2DArray);
                double[,] sortArray = SwapLastLine(input2DArray);
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();

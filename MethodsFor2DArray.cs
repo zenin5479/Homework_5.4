@@ -864,6 +864,47 @@ namespace Homework_5._4
          }
       }
 
+      public static double[,] SwapLastLine(double[,] inputArray)
+      {
+         Console.WriteLine("Замена первой строки двумерного массива последней");
+         int i = 0;
+         int j = inputArray.GetLength(0) - 1;
+         int k = 0;
+         while (k < inputArray.GetLength(1))
+         {
+            inputArray[i, k] = inputArray[j, k];
+            k++;
+         }
+
+         int l = 0;
+         while (l < inputArray.GetLength(0))
+         {
+            int m = 0;
+            while (m < inputArray.GetLength(1))
+            {
+               if (m == inputArray.GetLength(1) - 1)
+               {
+                  //Console.Write(inputArray[l, m]);
+                  Console.Write("{0:f}", inputArray[l, m]);
+                  //Console.Write("{0:f2}", inputArray[l, m]);
+               }
+               else
+               {
+                  //Console.Write(inputArray[l, m] + " ");
+                  Console.Write("{0:f} ", inputArray[l, m]);
+                  //Console.Write("{0:f2} ", inputArray[l, m]);
+               }
+
+               m++;
+            }
+
+            l++;
+            Console.WriteLine();
+         }
+
+         return inputArray;
+      }
+
       public static double[] FindMaxDouble(double[,] inputArray)
       {
          // Поиск максимального элемента строки (без флагов bool)

@@ -55,5 +55,65 @@ namespace Homework_5._4
 
          Console.ReadKey();
       }
+
+      public static double[,] BubbleSortArray(double[,] inputArray, double[] data)
+      {
+         Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
+         int i = 0;
+         while (i < data.Length)
+         {
+            int j = i + 1;
+            while (j < data.Length)
+            {
+               if (data[i] < data[j])
+               {
+                  double tеmpData = data[i];
+                  data[i] = data[j];
+                  data[j] = tеmpData;
+
+                  int k = 0;
+                  while (k < inputArray.GetLength(1))
+                  {
+                     double tempArray = inputArray[i, k];
+                     inputArray[i, k] = inputArray[j, k];
+                     inputArray[j, k] = tempArray;
+                     k++;
+                  }
+               }
+
+               j++;
+            }
+
+            i++;
+         }
+
+         int l = 0;
+         while (l < inputArray.GetLength(0))
+         {
+            int m = 0;
+            while (m < inputArray.GetLength(1))
+            {
+               if (m == inputArray.GetLength(1) - 1)
+               {
+                  //Console.Write(inputArray[l, m]);
+                  Console.Write("{0:f}", inputArray[l, m]);
+                  //Console.Write("{0:f2}", inputArray[l, m]);
+               }
+               else
+               {
+                  //Console.Write(inputArray[l, m] + " ");
+                  Console.Write("{0:f} ", inputArray[l, m]);
+                  //Console.Write("{0:f2} ", inputArray[l, m]);
+               }
+
+               m++;
+            }
+
+            l++;
+            Console.WriteLine();
+         }
+
+         return inputArray;
+      }
    }
 }

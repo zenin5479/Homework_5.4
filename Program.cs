@@ -41,7 +41,7 @@ namespace Homework_5._4
             int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray, name2DArray);
 
             bool comparison = MethodsFor2DArray.ComparisonNegativeDouble(negative1DArray, negative2DArray);
-            
+
             if (comparison)
             {
                Console.WriteLine(comparison);
@@ -60,24 +60,20 @@ namespace Homework_5._4
       {
          Console.WriteLine("Пузырьковая сортировка по сумме элементов строк двумерного массива");
          int i = 0;
-         while (i < inputArray.Length)
+         while (i < inputArray.GetLength(0))
          {
             int j = i + 1;
-            while (j < inputArray.Length)
+            while (j < inputArray.GetLength(1))
             {
-               if (inputArray[i] < inputArray[j])
+               int k = 0;
+               while (k < inputArray.GetLength(1))
                {
-                  
-
-                  int k = 0;
-                  while (k < inputArray.GetLength(1))
-                  {
-                     double tempArray = inputArray[i, k];
-                     inputArray[i, k] = inputArray[j, k];
-                     inputArray[j, k] = tempArray;
-                     k++;
-                  }
+                  double tempArray = inputArray[i, k];
+                  inputArray[i, k] = inputArray[j, k];
+                  inputArray[j, k] = tempArray;
+                  k++;
                }
+
 
                j++;
             }

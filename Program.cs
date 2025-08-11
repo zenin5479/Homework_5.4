@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using LibraryFor1DArray;
+using LibraryFor2DArray;
 
 // Обработка массивов подпрограммами
 // Даны одномерный массив P из n элементов и двумерный массив A: n строк и n столбцов

@@ -132,7 +132,7 @@ namespace Homework_5._4
          return outputArray;
       }
 
-      public static int SearchingNegative1DArrayDouble(double[] inputArray, string nameArray)
+      public static int Searching1DArrayNegativeDouble(double[] inputArray, string nameArray)
       {
          int count = 0;
          int i = 0;
@@ -277,7 +277,7 @@ namespace Homework_5._4
          return outputArray;
       }
 
-      public static double[,] SwapLastLine2DArray(double[,] inputArray)
+      public static double[,] Swap2DArrayLastLine(double[,] inputArray)
       {
          Console.WriteLine("Замена первой строки двумерного массива последней");
          int i = 0;

@@ -37,7 +37,7 @@ namespace Homework_5._4
          {
             double[] input1DArray = MethodsForArray.Input1DArrayDouble(source1DArray, n, name1DArray);
             double[,] input2DArray = MethodsForArray.Input2DArrayMatrixDouble(source2DArray, n, name2DArray);
-            int negative1DArray = MethodsForArray.SearchingNegative1DArrayDouble(input1DArray, name1DArray);
+            int negative1DArray = MethodsForArray.Searching1DArrayNegativeDouble(input1DArray, name1DArray);
             int negative2DArray = MethodsForArray.SearchingNegativeDouble2DArray(input2DArray, name2DArray);
             bool comparison = MethodsForArray.ComparisonNegativeDouble2DArray(negative1DArray, negative2DArray);
             if (!comparison)
@@ -47,7 +47,7 @@ namespace Homework_5._4
             else
             {
                Console.WriteLine("В одномерном массиве {0} больше отрицательных элементов чем в двумерном массиве {1}", name1DArray, name2DArray);
-               double[,] sortArray = MethodsForArray.SwapLastLine2DArray(input2DArray);
+               double[,] sortArray = MethodsForArray.Swap2DArrayLastLine(input2DArray);
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();
                string[] arrayLines = MethodsForArray.Output2DArrayString(sortArray);

@@ -154,7 +154,7 @@ namespace Homework_5._4
 
          return count;
       }
-      
+
       public static double[,] Enter2DArray(string path, string nameFile)
       {
          // Двумерный массив вещественных чисел

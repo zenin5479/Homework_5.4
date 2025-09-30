@@ -390,7 +390,7 @@ namespace Homework_5._4
          return arrayString;
       }
 
-      public static void FileWrite2DArrayString(string[] arrayString, string nameFile)
+      public static void FileWrite2DArray(string[] arrayString, string nameFile)
       {
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл {0}", nameFile);

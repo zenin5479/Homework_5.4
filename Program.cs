@@ -51,7 +51,7 @@ namespace Homework_5._4
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();
                string[] arrayLines = MethodsForArray.Output2DArray(sortArray);
-               MethodsForArray.FileWrite2DArrayString(arrayLines, nameFileInput);
+               MethodsForArray.FileWrite2DArray(arrayLines, nameFileInput);
             }
          }
 

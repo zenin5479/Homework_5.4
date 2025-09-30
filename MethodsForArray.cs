@@ -132,7 +132,7 @@ namespace Homework_5._4
          return outputArray;
       }
 
-      public static int Searching1DArrayNegativeDouble(double[] inputArray, string nameArray)
+      public static int Searching1DArrayNegative(double[] inputArray, string nameArray)
       {
          int count = 0;
          int i = 0;

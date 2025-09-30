@@ -318,7 +318,7 @@ namespace Homework_5._4
          return inputArray;
       }
 
-      public static int SearchingNegativeDouble2DArray(double[,] inputArray, string nameArray)
+      public static int Searching2DArrayNegativeDouble(double[,] inputArray, string nameArray)
       {
          int count = 0;
          int i = 0;
@@ -347,7 +347,7 @@ namespace Homework_5._4
          return count;
       }
 
-      public static bool ComparisonNegativeDouble2DArray(double negativeOne, double negativeTwo)
+      public static bool Comparison2DArrayNegativeDouble(double negativeOne, double negativeTwo)
       {
          return negativeOne > negativeTwo;
       }

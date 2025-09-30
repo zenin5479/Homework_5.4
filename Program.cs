@@ -35,7 +35,7 @@ namespace Homework_5._4
          }
          else
          {
-            double[] input1DArray = MethodsForArray.Input1DArrayDouble(source1DArray, n, name1DArray);
+            double[] input1DArray = MethodsForArray.Input1DArray(source1DArray, n, name1DArray);
             double[,] input2DArray = MethodsForArray.Input2DArrayMatrixDouble(source2DArray, n, name2DArray);
             int negative1DArray = MethodsForArray.Searching1DArrayNegativeDouble(input1DArray, name1DArray);
             int negative2DArray = MethodsForArray.Searching2DArrayNegativeDouble(input2DArray, name2DArray);

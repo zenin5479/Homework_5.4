@@ -114,7 +114,7 @@ namespace Homework_5._4
          return arrayDouble;
       }
 
-      public static double[] Input1DArrayDouble(double[] inputArray, int n, string nameArray)
+      public static double[] Input1DArray(double[] inputArray, int n, string nameArray)
       {
          Console.WriteLine("Одномерный массив вещественных чисел {0}:", nameArray);
          double[] outputArray = new double[n];

@@ -24,7 +24,7 @@ namespace Homework_5._4
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
          int n = MethodsForArray.Number1DArrayElements(name1DArray);
          double[] source1DArray = MethodsForArray.Enter1DArray(pathFile1DArray, name1DArray);
-         double[,] source2DArray = MethodsForArray.Enter2DArrayDouble(pathFile2DArray, name2DArray);
+         double[,] source2DArray = MethodsForArray.Enter2DArray(pathFile2DArray, name2DArray);
          if (source1DArray.Length == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFile1DArray);
@@ -36,9 +36,9 @@ namespace Homework_5._4
          else
          {
             double[] input1DArray = MethodsForArray.Input1DArray(source1DArray, n, name1DArray);
-            double[,] input2DArray = MethodsForArray.Input2DArrayMatrixDouble(source2DArray, n, name2DArray);
+            double[,] input2DArray = MethodsForArray.Input2DArrayMatrix(source2DArray, n, name2DArray);
             int negative1DArray = MethodsForArray.Searching1DArrayNegative(input1DArray, name1DArray);
-            int negative2DArray = MethodsForArray.Searching2DArrayNegativeDouble(input2DArray, name2DArray);
+            int negative2DArray = MethodsForArray.Searching2DArrayNegative(input2DArray, name2DArray);
             bool comparison = MethodsForArray.Comparison2DArrayNegativeDouble(negative1DArray, negative2DArray);
             if (!comparison)
             {

@@ -155,7 +155,7 @@ namespace Homework_5._4
          return count;
       }
       
-      public static double[,] Enter2DArrayDouble(string path, string nameFile)
+      public static double[,] Enter2DArray(string path, string nameFile)
       {
          // Двумерный массив вещественных чисел
          double[,] arrayDouble = { };
@@ -253,7 +253,7 @@ namespace Homework_5._4
          return arrayDouble;
       }
 
-      public static double[,] Input2DArrayMatrixDouble(double[,] inputArray, int n, string nameArray)
+      public static double[,] Input2DArrayMatrix(double[,] inputArray, int n, string nameArray)
       {
          Console.WriteLine("Двумерный массив (матрица) вещественных чисел {0}:", nameArray);
          double[,] outputArray = new double[n, n];
@@ -318,7 +318,7 @@ namespace Homework_5._4
          return inputArray;
       }
 
-      public static int Searching2DArrayNegativeDouble(double[,] inputArray, string nameArray)
+      public static int Searching2DArrayNegative(double[,] inputArray, string nameArray)
       {
          int count = 0;
          int i = 0;

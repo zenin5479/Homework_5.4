@@ -23,7 +23,7 @@ namespace Homework_5._4
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
          int n = MethodsForArray.Number1DArrayElements(name1DArray);
-         double[] source1DArray = MethodsForArray.Enter1DArrayDouble(pathFile1DArray, name1DArray);
+         double[] source1DArray = MethodsForArray.Enter1DArray(pathFile1DArray, name1DArray);
          double[,] source2DArray = MethodsForArray.Enter2DArrayDouble(pathFile2DArray, name2DArray);
          if (source1DArray.Length == 0)
          {

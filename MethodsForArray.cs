@@ -23,7 +23,7 @@ namespace Homework_5._4
          return n;
       }
 
-      public static double[] Enter1DArrayDouble(string path, string nameArray)
+      public static double[] Enter1DArray(string path, string nameArray)
       {
          string stroka = null;
          double[] arrayDouble = { };

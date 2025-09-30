@@ -39,7 +39,7 @@ namespace Homework_5._4
             double[,] input2DArray = MethodsForArray.Input2DArrayMatrix(source2DArray, n, name2DArray);
             int negative1DArray = MethodsForArray.Searching1DArrayNegative(input1DArray, name1DArray);
             int negative2DArray = MethodsForArray.Searching2DArrayNegative(input2DArray, name2DArray);
-            bool comparison = MethodsForArray.Comparison2DArrayNegativeDouble(negative1DArray, negative2DArray);
+            bool comparison = MethodsForArray.Comparison2DArrayNegative(negative1DArray, negative2DArray);
             if (!comparison)
             {
                Console.WriteLine("В одномерном массиве {0} меньше отрицательных элементов чем в двумерном массиве {1}", name1DArray, name2DArray);

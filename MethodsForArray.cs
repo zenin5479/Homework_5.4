@@ -347,7 +347,7 @@ namespace Homework_5._4
          return count;
       }
 
-      public static bool Comparison2DArrayNegativeDouble(double negativeOne, double negativeTwo)
+      public static bool Comparison2DArrayNegative(double negativeOne, double negativeTwo)
       {
          return negativeOne > negativeTwo;
       }

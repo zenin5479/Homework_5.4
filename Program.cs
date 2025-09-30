@@ -1,7 +1,5 @@
 ﻿using System;
 using System.IO;
-using LibraryFor1DArray;
-using LibraryFor2DArray;
 
 // Обработка массивов подпрограммами
 // Даны одномерный массив P из n элементов и двумерный массив A: n строк и n столбцов
@@ -24,9 +22,9 @@ namespace Homework_5._4
          string nameFileInput = "finish.txt";
          string pathFile1DArray = Path.GetFullPath(nameFile1DArray);
          string pathFile2DArray = Path.GetFullPath(nameFile2DArray);
-         int n = MethodsFor1DArray.NumberArrayElements(name1DArray);
-         double[] source1DArray = MethodsFor1DArray.EnterArrayDouble(pathFile1DArray, name1DArray);
-         double[,] source2DArray = MethodsFor2DArray.EnterArrayDouble(pathFile2DArray, name2DArray);
+         int n = MethodsForArray.Number1DArrayElements(name1DArray);
+         double[] source1DArray = MethodsForArray.Enter1DArrayDouble(pathFile1DArray, name1DArray);
+         double[,] source2DArray = MethodsForArray.EnterArrayDouble(pathFile2DArray, name2DArray);
          if (source1DArray.Length == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFile1DArray);
@@ -37,11 +35,11 @@ namespace Homework_5._4
          }
          else
          {
-            double[] input1DArray = MethodsFor1DArray.InputArrayDouble(source1DArray, n, name1DArray);
-            double[,] input2DArray = MethodsFor2DArray.InputMatrixDouble(source2DArray, n, name2DArray);
-            int negative1DArray = MethodsFor1DArray.SearchingNegativeDouble(input1DArray, name1DArray);
-            int negative2DArray = MethodsFor2DArray.SearchingNegativeDouble(input2DArray, name2DArray);
-            bool comparison = MethodsFor2DArray.ComparisonNegativeDouble(negative1DArray, negative2DArray);
+            double[] input1DArray = MethodsForArray.Input1DArrayDouble(source1DArray, n, name1DArray);
+            double[,] input2DArray = MethodsForArray.InputMatrixDouble(source2DArray, n, name2DArray);
+            int negative1DArray = MethodsForArray.SearchingNegative1DArrayDouble(input1DArray, name1DArray);
+            int negative2DArray = MethodsForArray.SearchingNegativeDouble(input2DArray, name2DArray);
+            bool comparison = MethodsForArray.ComparisonNegativeDouble(negative1DArray, negative2DArray);
             if (!comparison)
             {
                Console.WriteLine("В одномерном массиве {0} меньше отрицательных элементов чем в двумерном массиве {1}", name1DArray, name2DArray);
@@ -49,11 +47,11 @@ namespace Homework_5._4
             else
             {
                Console.WriteLine("В одномерном массиве {0} больше отрицательных элементов чем в двумерном массиве {1}", name1DArray, name2DArray);
-               double[,] sortArray = MethodsFor2DArray.SwapLastLine(input2DArray);
+               double[,] sortArray = MethodsForArray.SwapLastLine(input2DArray);
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();
-               string[] arrayLines = MethodsFor2DArray.OutputArrayString(sortArray);
-               MethodsFor2DArray.FileWriteArrayString(arrayLines, nameFileInput);
+               string[] arrayLines = MethodsForArray.OutputArrayString(sortArray);
+               MethodsForArray.FileWriteArrayString(arrayLines, nameFileInput);
             }
          }
 

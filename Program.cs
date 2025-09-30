@@ -15,7 +15,7 @@ namespace Homework_5._4
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          string name1DArray = "P";
          string name2DArray = "A";

@@ -50,7 +50,7 @@ namespace Homework_5._4
                double[,] sortArray = MethodsForArray.Swap2DArrayLastLine(input2DArray);
                string pathFileInput = Path.GetFullPath(nameFileInput);
                File.Create(pathFileInput).Close();
-               string[] arrayLines = MethodsForArray.Output2DArrayString(sortArray);
+               string[] arrayLines = MethodsForArray.Output2DArray(sortArray);
                MethodsForArray.FileWrite2DArrayString(arrayLines, nameFileInput);
             }
          }

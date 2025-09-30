@@ -352,7 +352,7 @@ namespace Homework_5._4
          return negativeOne > negativeTwo;
       }
 
-      public static string[] Output2DArrayString(double[,] inputArray)
+      public static string[] Output2DArray(double[,] inputArray)
       {
          // Объединение двумерного массива double[]
          // в одномерный массив строк string[] для записи в файл
